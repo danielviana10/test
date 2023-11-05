@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./css/registro.css">
+</head>
+
+<body>
+    <header>
+        <ol>
+            <li class="registro">registro de</li>
+            <li class="registro">sabores</li>
+        </ol>
+        <div id="nomeEmpresa">
+            <h3>doce aroma</h3>
+        </div>
+    </header>
+
+    <main>
+        <form id="formulario">
+            <label for="nome">NOME</label>
+            <input type="text" name="nome" id="nome" size="20" maxlength="20" required autocomplete="off">
+
+
+            <label for="Valor">VALOR UNITÁRIO</label>
+            <input type="text" name="Valor" id="Valor" size="10" maxlength="10" required autocomplete="off">
+
+            <ul class="opcao">
+                <li>
+                    <label for="restricao">É VEGANO? </label>
+                </li>
+                <li>
+                    <input type="radio" name="restricao" id="sim" value="sim">
+
+                    <label for="sim">SIM</label>
+                </li>
+                <li>
+                    <input type="radio" name="restricao" id="nao" value="nao">
+                    <label for="nao">NÃO</label>
+                </li>
+            </ul>
+
+
+            <ul class="opcao">
+                <li>
+                    <label for="Categoria">CATEGORIA: </label>
+                </li>
+                <li>
+                    <input type="radio" name="Categoria" id="salgado" value="salgado">
+                    <label for="salgado">SALGADO</label>
+                </li>
+                <li>
+                    <input type="radio" name="Categoria" id="doce" value="doce">
+                    <label for="doce">DOCE</label>
+                </li>
+                <li>
+                    <input type="radio" name="Categoria" id="bebida" value="bebida">
+                    <label for="bebida">BEBIDA</label>
+                </li>
+            </ul>
+
+
+
+            <label for="descricao">DESCRIÇÃO</label>
+            <textarea name="descricao" id="descricao" rows="5" cols="40"
+                      placeholder="Explique o que torna sua comida especial!" autocomplete="off" required></textarea>
+        </form>
+
+        <div id="foto">
+            <img src="./imgs/registro.png">
+        </div>
+    </main>
+
+    <footer>
+
+        <button>Cadastrar</button>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+﻿@model List<Item>
+@{
+    ViewData["Title"] = "Listagem";
+    
+    
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem</title>
+
+    <link rel="stylesheet" href="~/css/listagem.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Mercadinho.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <alert texto="@TempData["mensagem"]"></alert>
+    <h1>Realize um Pedido</h1>
+
+@*     @foreach (var item in Model)
+    {
+        listaItens.Add(item.Nome);
+    } *@
+
+    <div id="container">
+        <form asp-action="Cadastrar" id="formulario">
+
+
+            @* _FormularioPedido aqui *@
+            @* <partial name="_FormularioPedido" id="formulario"></partial> *@
+            <div>
+                <label for="NomeCliente">Nome Cliente:</label>
+                <br />
+                <input name="NomeCliente" type="text" size="50" maxlength="50" required autocomplete="off">
+                
+            </div>
+
+
+      
+                <label >Produtos</label>
+                <br />
+            <select name="ItemId" class="form-select">
+
+                    @foreach (var produto in Model)
+                    {
+
+                        <option value="@produto.Id" >@produto.Nome</option>
+                        @* <input name="valorItem" type="hidden" value="@produto.Valor"> *@
+                    }
+
+            </select>
+            
+
+            <a asp-action="Cadastrar">
+                <button type="submit" id="botao">Cadastrar</button>
+            </a>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

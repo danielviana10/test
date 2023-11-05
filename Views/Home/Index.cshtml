@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PadariaDoceAroma.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div id="parteUm">
+        <div id="container">
+            <h2 class="registro">Mercadinho</h2>
+            
+            <a asp-controller="Item" asp-action="Cadastrar"><button class="botoes">Cadastrar Novo Item</button></a>
+            <br>
+            <a asp-controller="Item" asp-action="Index"><button class="botoes">Ver cardápio Cadastrado</button></a>
+        </div>
+        <div id="foto">
+            <img id="foto_padaria" src="./img/inicio.png" alt="Foto da padaria">
+        </div>
+    </div>
+    <h4>Mordida no Paraíso!</h4>
+    <div id="containerDois">
+        <div class="imagens">
+            <img src="./img/pao.png" alt="Imagem de pães">
+            <p class="nomeComida">Pães fofinhos</p>
+            <p>Pães de Batata, mandioca e Banana</p>
+        </div>
+        <div class="imagens">
+            <img src="./img/bolo.png" alt="Imagem de bolos">
+            <p class="nomeComida">Bolos tentadores</p>
+            <p>Bolos de chocolate, cenoura, laranja e limão</p>
+        </div>
+        <div class="imagens">
+            <img src="./img/torta.png" alt="Imagem de tortas">
+            <p class="nomeComida">Tortas deliciosas</p>
+            <p>Tortas de creme de mirtilo, maçã, pêssego e banana</p>
+        </div>
+    </div>
+    <footer>
+        Criando memórias, uma fatia de cada vez!
+    </footer>
+</body>
+
+</html>
+
